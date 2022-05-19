@@ -1,0 +1,4 @@
+#ifndef ATHENA_POLYNOMIAL_H
+#define ATHENA_POLYNOMIAL_H
+
+#endif
