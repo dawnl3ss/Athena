@@ -11,6 +11,7 @@ public:
 public:
     vector(int x, int y);
     float get_norm();
+    float get_determinant(vector* vec);
 };
 
 #endif
