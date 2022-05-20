@@ -1,9 +1,7 @@
 #include <iostream>
-#include "src/geometry/vector/vector.cpp"
+#include "src/factory.cpp"
 
 int main(){
-    vector *vec = new vector(5, 6);
-    vector *vec2 = new vector(10, 12);
-    std::cout << vec->get_determinant(vec2) << std::endl;
+    std::cout << new_vector(2, 5)->get_norm() << std::endl;
     return 0;
 }

@@ -3,8 +3,6 @@
 
 #include <cmath>
 
-class geometry {
-
-};
+class geometry {};
 
 #endif
