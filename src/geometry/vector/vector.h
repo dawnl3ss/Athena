@@ -10,7 +10,7 @@ public:
 
 public:
     vector(int x, int y);
-    int get_norm();
+    float get_norm();
 };
 
 #endif
