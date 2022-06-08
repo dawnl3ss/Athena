@@ -12,6 +12,7 @@ public:
     vector(int x, int y);
     float get_norm();
     float get_determinant(vector* vec);
+    float dot_product(vector* vec);
     bool is_collinear(vector* vec);
 };
 
