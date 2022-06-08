@@ -12,3 +12,7 @@ float vector::get_norm(){
 float vector::get_determinant(vector* vec){
     return (this->x * vec->y) - (vec->x * this->y);
 }
+
+bool vector::is_collinear(vector* vec){
+    return this->get_determinant(vec) == 0;
+}
