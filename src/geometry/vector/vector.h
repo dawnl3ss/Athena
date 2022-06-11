@@ -14,6 +14,7 @@ public:
     float get_determinant(vector* vec);
     float dot_product(vector* vec);
     bool is_collinear(vector* vec);
+    bool is_orthogonal(vector* vec);
 };
 
 #endif
