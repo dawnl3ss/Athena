@@ -5,6 +5,10 @@ vector::vector(int x, int y):
     y(y)
 {}
 
+vector* vector::add(vector* vec){
+    return new vector(this->x + vec->x, this->y + vec->y);
+}
+
 float vector::get_norm(){
     return sqrt((this->x * this->x) + (this->y * this->y));
 }
@@ -21,6 +25,6 @@ bool vector::is_collinear(vector* vec){
     return this->get_determinant(vec) == 0;
 }
 
-bool vector::is_orthogonal(vector *vec){
+bool vector::is_orthogonal(vector* vec){
     return this->dot_product(vec) == 0;
 }
