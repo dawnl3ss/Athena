@@ -5,7 +5,7 @@
 
 class polygon : public geometry {
 
-public:
+protected:
     float get_area();
     float get_perimeter();
 };
