@@ -4,10 +4,10 @@ vector* new_vector(int x, int y){
     return new vector(x, y);
 }
 
-triangle* new_triangle(int AB, int BC, int AC){
+triangle* new_triangle(int a, int b, int c){
     return new triangle(
-        new segment(AB),
-        new segment(BC),
-        new segment(AC)
+        new segment(a),
+        new segment(b),
+        new segment(c)
     );
 }

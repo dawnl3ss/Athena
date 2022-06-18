@@ -7,15 +7,15 @@
 class triangle : public polygon {
 
 public:
-    segment* AB;
-    segment* BC;
-    segment* AC;
+    segment* a;
+    segment* b;
+    segment* c;
     bool is_rectangle = false;
 
 public:
-    triangle(segment* AB, segment* BC, segment* AC);
-    float get_area();
+    triangle(segment* a, segment* b, segment* c);
     float get_perimeter();
+    float get_area();
 };
 
 #endif
