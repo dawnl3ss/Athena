@@ -30,15 +30,12 @@ float triangle::get_area(){
 
 float triangle::pythagore(){
     if (this->isRectangle){
-        segment* needed;
-        int id;
         std::vector<segment*> sides;
 
         for (int i = 1; i <= 3; i++){
-            if (this->get_side(i)->get_length() == 0){
-                needed = this->get_side(i);
-                id = i;
-            } else sides.push_back(this->get_side(i));
+            if (this->get_side(i)->get_length() != 0) {
+                sides.push_back(this->get_side(i));
+            }
         }
         return sqrt(pow(sides.at(0)->get_length(), 2) + pow(sides.at(1)->get_length(), 2));
     } else std::cout << "Your triangle is not rectangle." << std::endl;
