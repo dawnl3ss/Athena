@@ -1,9 +1,21 @@
 #include "triangle.h"
 
-triangle::triangle(segment* a, segment* b, segment* c){
+triangle::triangle(segment* a, segment* b, segment* c, bool isRectangle){
     this->a = a;
     this->b = b;
     this->c = c;
+    this->isRectangle = isRectangle;
+}
+
+segment* triangle::get_side(int id){
+    switch (id){
+        case 1:
+            return this->a;
+        case 2:
+            return this->b;
+        case 3:
+            return this->c;
+    }
 }
 
 float triangle::get_perimeter(){
@@ -16,3 +28,19 @@ float triangle::get_area(){
     return sqrt((dp * (dp - this->a->get_length())) * (dp - this->b->get_length()) * (dp - this->c->get_length()));
 }
 
+float triangle::pythagore(){
+    if (this->isRectangle){
+        segment* needed;
+        int id;
+        std::vector<segment*> sides;
+
+        for (int i = 1; i <= 3; i++){
+            if (this->get_side(i)->get_length() == 0){
+                needed = this->get_side(i);
+                id = i;
+            } else sides.push_back(this->get_side(i));
+        }
+        return sqrt(pow(sides.at(0)->get_length(), 2) + pow(sides.at(1)->get_length(), 2));
+    } else std::cout << "Your triangle is not rectangle." << std::endl;
+    return -1;
+}

@@ -9,12 +9,14 @@ public:
     segment* a;
     segment* b;
     segment* c;
-    bool is_rectangle = false;
+    bool isRectangle = false;
 
 public:
-    triangle(segment* a, segment* b, segment* c);
+    triangle(segment* a, segment* b, segment* c, bool isRectangle);
+    segment* get_side(int id);
     float get_perimeter();
     float get_area();
+    float pythagore();
 };
 
 #endif

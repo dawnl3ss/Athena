@@ -2,7 +2,7 @@
 #include "src/factory.cpp"
 
 int main(){
-    square* square = new_square(5);
-    std::cout << square->get_area() << std::endl;
+    triangle* triangle = new_triangle(5, 0, 2, true);
+    std::cout << triangle->pythagore() << std::endl;
     return 0;
 }
