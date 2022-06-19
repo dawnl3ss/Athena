@@ -2,6 +2,8 @@
 #define ATHENA_POLYGON_H
 
 #include "../geometry.h"
+#include "../line/segment.cpp"
+
 
 class polygon : public geometry {
 

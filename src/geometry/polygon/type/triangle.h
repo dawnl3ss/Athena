@@ -2,7 +2,6 @@
 #define ATHENA_TRIANGLE_H
 
 #include "../polygon.h"
-#include "../../line/segment.cpp"
 
 class triangle : public polygon {
 

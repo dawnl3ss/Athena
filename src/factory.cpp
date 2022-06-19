@@ -11,3 +11,7 @@ triangle* new_triangle(int a, int b, int c){
         new segment(c)
     );
 }
+
+square* new_square(int side){
+    return new square(new segment(side));
+}
