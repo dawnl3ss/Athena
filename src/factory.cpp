@@ -16,3 +16,8 @@ triangle* new_triangle(int a, int b, int c, bool isRectangle = false){
 square* new_square(int side){
     return new square(new segment(side));
 }
+
+bool linear_search(std::vector<int> array, int needle){
+    search* instance = new search();
+    return instance->linear_search(array, needle);
+}
