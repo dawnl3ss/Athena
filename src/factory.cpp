@@ -21,3 +21,8 @@ bool linear_search(std::vector<int> array, int needle){
     search* instance = new search();
     return instance->linear_search(array, needle);
 }
+
+bool dichotomy_search(std::vector<int> array, int needle){
+    search* instance = new search();
+    return instance->dichotomy_search(array, needle);
+}

@@ -7,3 +7,21 @@ bool search::linear_search(std::vector<int> haystack, int needle) {
     std::cout << std::endl;
     return false;
 }
+
+bool search::dichotomy_search(std::vector<int> haystack, int needle){
+    int left = 0;
+    int right = haystack.size();
+
+    while (left <= right){
+        int middle = round((left + right) / 2);
+
+        if (haystack[middle] == needle){
+            return true;
+        } else if (haystack[middle] > needle){
+            right = middle - 1;
+        } else {
+            left = middle + 1;
+        }
+    }
+    return false;
+}

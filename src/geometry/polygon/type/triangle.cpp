@@ -15,6 +15,8 @@ segment* triangle::get_side(int id){
             return this->b;
         case 3:
             return this->c;
+        default:
+            return new segment(0);
     }
 }
 
