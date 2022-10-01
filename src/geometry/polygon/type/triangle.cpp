@@ -24,10 +24,13 @@ float triangle::get_perimeter(){
     return this->a->get_length() + this->b->get_length() + this->c->get_length();
 }
 
-// Formule de Heron | ne marche pas quand un des cotés >= dp
+// Formule de Heron | ne marche pas quand un des cotés == dp
 float triangle::get_area(){
-    float dp = this->get_perimeter() / 2;
-    return sqrt((dp * (dp - this->a->get_length())) * (dp - this->b->get_length()) * (dp - this->c->get_length()));
+    float s = this->get_perimeter() / 2;
+    float a = this->a->get_length();
+    float b = this->b->get_length();
+    float c = this->c->get_length();
+    return round(sqrt((s * (s - a)) * (s - b) * (s - c)) * 100) / 100;
 }
 
 float triangle::pythagore(){
