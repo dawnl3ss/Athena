@@ -6,11 +6,11 @@
 class polynomial : public algebra {
 
 public:
-    int x = 0, a = 0, b = 0, c = 0;
+    float x = 0, a = 0, b = 0, c = 0;
 
 public:
-    polynomial(int a, int b, int c = 0);
-    int resolve();
+    polynomial(float a, float b, float c);
+    float resolve();
 };
 
 #endif

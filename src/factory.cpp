@@ -17,6 +17,10 @@ square* new_square(int side){
     return new square(new segment(side));
 }
 
+binomial* new_binomial(float a, float b){
+    return new binomial(a, b);
+}
+
 bool linear_search(std::vector<int> array, int needle){
     search* instance = new search();
     return instance->linear_search(array, needle);
